@@ -37,3 +37,4 @@ Here's a 500-word description of Big Data Analysis, including resources, tools, 
 **Model Evaluation**: The performance of the models is assessed using various metrics like accuracy, precision, recall, and F1-score.
 **Visualization**: Results are presented in a clear and concise manner using visualizations like charts, graphs, and dashboards.
 This is a simplified overview. Big Data Analysis involves complex methodologies and technologies that require expertise in various domains.
+#![Big-Data-ecosystem png TABLEAU](https://github.com/user-attachments/assets/8d7040a7-cfae-4d32-b694-7a2f49f0d701)
