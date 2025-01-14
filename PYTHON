@@ -1,0 +1,56 @@
+python
+import pandas as pd
+
+# Load the data (replace 'your_data.csv' with your actual file)
+data = pd.read_csv('your_data.csv')
+
+# Basic Data Exploration
+print(data.head())  # Display the first few rows
+print(data.describe())  # Summary statistics
+
+# Data Cleaning (example: handling missing values)
+data.fillna(data.mean(), inplace=True)  # Replace missing values with mean
+
+# Data Visualization (using matplotlib)
+import matplotlib.pyplot as plt
+plt.hist(data['column_name'])  # Create a histogram
+plt.show()
+
+# Data Analysis (example: correlation)
+correlation_matrix = data.corr()
+print(correlation_matrix)
+
+# Machine Learning (example: simple linear regression)
+from sklearn.linear_model import LinearRegression
+X = data[['feature1', 'feature2']]  # Features
+y = data['target_variable']  # Target variable
+model = LinearRegression().fit(X, y)
+print('Coefficients:', model.coef_)
+print('Intercept:', model.intercept_)
+
+Explanation:
+
+Import necessary libraries:
+
+pandas: For data manipulation and analysis.
+matplotlib.pyplot: For data visualization.
+sklearn.linear_model: For machine learning models.
+Load the data:
+
+Use pd.read_csv() to load your data from a CSV file.
+Basic data exploration:
+
+data.head(): Display the first few rows to get a general overview.
+data.describe(): Get summary statistics (mean, standard deviation, etc.).
+Data cleaning:
+
+Handle missing values (e.g., replace with mean, median, or mode).
+Data visualization:
+
+Create visualizations (histograms, scatter plots, etc.) using matplotlib.pyplot.
+Data analysis:
+
+Calculate correlations between variables.
+Machine learning:
+
+Train a simple linear regression model.
