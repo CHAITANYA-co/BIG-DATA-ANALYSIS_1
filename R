@@ -1,0 +1,60 @@
+R
+# Install necessary packages
+install.packages(c("data.table", "ggplot2", "caret"))
+
+# Load libraries
+library(data.table)
+library(ggplot2)
+library(caret)
+
+# Load data (replace 'your_data.csv' with your actual file)
+data <- fread("your_data.csv") 
+
+# Data Exploration
+summary(data)
+str(data)
+
+# Data Cleaning (example: handling missing values)
+data[is.na(column_name), column_name := mean(column_name, na.rm = TRUE)]
+
+# Data Visualization
+ggplot(data, aes(x = column1, y = column2)) + 
+  geom_point() + 
+  labs(x = "Column 1", y = "Column 2", title = "Scatter Plot")
+
+# Data Analysis (example: linear regression)
+model <- lm(column3 ~ column1 + column2, data = data)
+summary(model)
+
+# Machine Learning (example: train a classification model)
+train_control <- trainControl(method = "cv", number = 10) # 10-fold cross-validation
+model_caret <- train(column3 ~ column1 + column2, 
+                    data = data, 
+                    method = "glm", 
+                    trControl = train_control)
+print(model_caret)
+Explanation:
+
+Install and load necessary packages:
+
+data.table: Efficient data manipulation.
+ggplot2: Data visualization.
+caret: Machine learning workflow.
+Load data:
+
+Use fread() from data.table for fast loading of large datasets.
+Data Exploration:
+
+summary() and str() provide basic insights into the data.
+Data Cleaning:
+
+Handle missing values (e.g., replace with mean).
+Data Visualization:
+
+Create visualizations using ggplot2.
+Data Analysis:
+
+Perform linear regression.
+Machine Learning:
+
+Train a classification model using caret with 10-fold cross-validation.
